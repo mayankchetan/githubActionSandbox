@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.6)
-project(DISCON VERSION 1.X.X LANGUAGES Fortran)
+project(DISCON VERSION 1.0.0 LANGUAGES Fortran)
 
 set(CMAKE_Fortran_MODULE_DIRECTORY "${CMAKE_BINARY_DIR}/ftnmods")
 
