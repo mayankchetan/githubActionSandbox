@@ -34,6 +34,16 @@ jobs:
         with:
           source-folder: code
 
+      # Testing compilation of DISCON
+      - name: Compile DSICON linux
+        shell: pwsh
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          make install
+
+
       # As an alternative to run-tests, you can use run-command to execute a MATLAB script, function, or statement.
       #- name: Run all tests
       #  uses: matlab-actions/run-command@v0
