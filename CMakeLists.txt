@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.6)
-project(DISCON VERSION 1.0.0 LANGUAGES Fortran)
+project(DISCON)
+enable_language(Fortran)
 
 set(CMAKE_Fortran_MODULE_DIRECTORY "${CMAKE_BINARY_DIR}/ftnmods")
 
@@ -38,14 +39,8 @@ set(SOURCES
 #add_definitions(-DGIT_VERSION_INFO="${GIT_DESCRIBE}")
 
 # Library
-add_library(discon SHARED ${SOURCES})
+add_library(DISCON SHARED ${SOURCES})
 
-install(TARGETS discon
-  EXPORT "${CMAKE_PROJECT_NAME}Libraries"
-  RUNTIME DESTINATION lib
-  LIBRARY DESTINATION lib
-  ARCHIVE DESTINATION lib
-)
-if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
-  set(CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}/install")
-endif()
+set(INSTALL_DEST "./..")
+
+install(TARGETS DISCON DESTINATION ${INSTALL_DEST})
