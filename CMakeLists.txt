@@ -23,7 +23,7 @@ endif()
 
 
 set(SOURCES
-    src/discon.f90
+    ../src/discon.f90
 )
 
 # Git version
